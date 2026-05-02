@@ -1,0 +1,80 @@
+{
+  "blogs": [
+    {
+      "id": "blog-1",
+      "title": "Building Autonomous Pentesting Agents",
+      "category": "AI-Automation",
+      "imageLink": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800",
+      "description": "How I hooked up an LLM to Kali Linux tools and created a self-directing scanning agent.",
+      "content": "This is the full detailed content for Building Autonomous Pentesting Agents. Here I discuss the integration between LangChain and Kali Linux utilities."
+    },
+    {
+      "id": "blog-2",
+      "title": "Automating OSINT with n8n",
+      "category": "AI-Automation",
+      "imageLink": "",
+      "description": "A workflow that automatically gathers threat intelligence and parses it with GPT-4.",
+      "content": "Full detailed content regarding Automating OSINT with n8n. Integrating multiple OSINT APIs and using GPT-4 for parsing."
+    },
+    {
+      "id": "blog-3",
+      "title": "Exploiting Insecure Direct Object References",
+      "category": "Pentesting",
+      "imageLink": "https://images.unsplash.com/photo-1510511459019-5bea2bc88fb9?auto=format&fit=crop&q=80&w=800",
+      "description": "A deep dive into finding and weaponizing IDOR vulnerabilities in enterprise APIs.",
+      "content": "IDOR vulnerabilities are incredibly common. In this post, I explore how to find and exploit them in modern APIs."
+    },
+    {
+      "id": "blog-4",
+      "title": "My Ultimate Homelab Setup",
+      "category": "Workflows",
+      "imageLink": "",
+      "description": "Deploying 40+ self-hosted services securely behind Traefik and Cloudflare Zero Trust.",
+      "content": "Details about my 40+ self-hosted services, including configurations for Docker Compose and networking."
+    }
+  ],
+  "labs": [
+    {
+      "id": "lab-1",
+      "title": "VoltAgent",
+      "category": "AI-Automation",
+      "imageLink": "",
+      "description": "An autonomous AI assistant capable of interacting with complex APIs, writing scripts, and managing homelab services.",
+      "content": "VoltAgent was built using TypeScript and OpenAI to be a personalized terminal assistant."
+    },
+    {
+      "id": "lab-2",
+      "title": "ShadowScan CLI",
+      "category": "Pentesting",
+      "imageLink": "",
+      "description": "A fast, concurrent network scanner that identifies open ports and cross-references CVEs automatically.",
+      "content": "ShadowScan CLI uses raw sockets to perform fast SYN scans and connects to vulners API."
+    },
+    {
+      "id": "lab-3",
+      "title": "Infra As Code Templates",
+      "category": "Workflows",
+      "imageLink": "",
+      "description": "A suite of Docker Compose files and bash scripts for one-click deployment of secure logging and monitoring stacks.",
+      "content": "Here are the details for the Infrastructure As Code templates for ELK and Prometheus."
+    }
+  ],
+  "services": [
+    {
+      "id": "service-1",
+      "title": "Workflow Automation",
+      "category": "AI",
+      "imageLink": "",
+      "description": "End-to-end automation of business processes using custom LLM agents and n8n pipelines to save you hundreds of manual hours.",
+      "content": "We offer custom ChatGPT integrations, CRM data syncing, and automated reporting..."
+    },
+    {
+      "id": "service-2",
+      "title": "Security Auditing",
+      "category": "Security",
+      "imageLink": "",
+      "description": "Comprehensive vulnerability assessments of web applications, APIs, and infrastructure configurations to ensure data integrity.",
+      "content": "Our security audits include penetration testing, cloud architecture review, and compliance checks..."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Lab | Aaditya Sharma</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Main Nav -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand"><span>[</span> AS <span>]</span></a>
+    
+    <button class="menu-toggle" aria-label="Toggle Navigation">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="lab.html" class="nav-link active">The Lab</a></li>
+      <li><a href="blog.html" class="nav-link">The Archive</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sub Navigation for Lab -->
+  <div class="sub-nav">
+    <a href="#AI-Automation">[ AI-Automation ]</a>
+    <a href="#Pentesting">[ Pentesting ]</a>
+    <a href="#Workflows">[ Workflows ]</a>
+  </div>
+
+  <main>
+    <section class="container" style="padding-top: 4rem;">
+      <span class="hero-subtitle">[ THE LAB ]</span>
+      <h2>SYSTEMS & <span class="accent">PROJECTS</span></h2>
+      <p style="max-width: 600px;">A collection of systems I have built, broken, and rebuilt. Deep dives into automation and security.</p>
+
+      <!-- AI Automation Section -->
+      <div id="AI-Automation" style="padding-top: 6rem; margin-top: -4rem;">
+        <h3 class="mono" style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; color: var(--accent-color);">> AI-Automation</h3>
+        <div class="content-grid" id="grid-labs-ai">
+        </div>
+      </div>
+
+      <!-- Pentesting Section -->
+      <div id="Pentesting" style="padding-top: 6rem; margin-top: -2rem;">
+        <h3 class="mono" style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; color: var(--accent-color);">> Pentesting</h3>
+        <div class="content-grid" id="grid-labs-pentesting">
+        </div>
+      </div>
+
+      <!-- Workflows Section -->
+      <div id="Workflows" style="padding-top: 6rem; margin-top: -2rem;">
+        <h3 class="mono" style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; color: var(--accent-color);">> Workflows</h3>
+        <div class="content-grid" id="grid-labs-workflows">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>&copy; 2026 Aaditya Sharma. All Rights Reserved.</div>
+    <div class="status-indicator">
+      <div class="status-dot"></div>
+      <span class="mono">Status: Secure | <span id="terminal-time"></span></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -34,14 +34,7 @@
     }
   ],
   "labs": [
-    {
-      "id": "lab-1",
-      "title": "VoltAgent",
-      "category": "AI-Automation",
-      "imageLink": "",
-      "description": "An autonomous AI assistant capable of interacting with complex APIs, writing scripts, and managing homelab services.",
-      "content": "VoltAgent was built using TypeScript and OpenAI to be a personalized terminal assistant."
-    },
+   
     {
       "id": "lab-2",
       "title": "ShadowScan CLI",

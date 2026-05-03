@@ -4,10 +4,36 @@
     <loc>https://addssh.in/</loc>
     <lastmod>2026-05-03</lastmod>
     <priority>1.00</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://addssh.in/blog.html</loc>
     <lastmod>2026-05-03</lastmod>
+    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://addssh.in/lab.html</loc>
+    <lastmod>2026-05-03</lastmod>
     <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://addssh.in/services.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://addssh.in/viewer.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <priority>0.60</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://addssh.in/content/data.json</loc>
+    <lastmod>2026-05-03</lastmod>
+    <priority>0.50</priority>
+    <changefreq>weekly</changefreq>
   </url>
 </urlset>

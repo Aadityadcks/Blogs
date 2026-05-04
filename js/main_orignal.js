@@ -1,13 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // --- Existing Logic ---
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
-  // Mobile Menu Toggle logic
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active-mobile'); // Use a class for cleaner mobile handling
       if (navLinks.style.display === 'flex') {
         navLinks.style.display = '';
+        navLinks.style.flexDirection = '';
+        navLinks.style.position = '';
+        navLinks.style.top = '';
+        navLinks.style.left = '';
+        navLinks.style.right = '';
+        navLinks.style.background = '';
+        navLinks.style.padding = '';
+        navLinks.style.borderBottom = '';
       } else {
         navLinks.style.display = 'flex';
         navLinks.style.flexDirection = 'column';
@@ -22,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Active Link Highlighting
   const currentPath = window.location.pathname;
   const links = document.querySelectorAll('.nav-link');
   
@@ -35,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Terminal Clock logic
   const timeDisplay = document.getElementById('terminal-time');
   if (timeDisplay) {
     const updateClock = () => {
@@ -46,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateClock, 1000);
   }
 
-  // Smooth Scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
@@ -69,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Dynamic Content Engine ---[cite: 12]
+  // --- Dynamic Content Engine ---
 
   async function fetchContent() {
     try {
@@ -86,8 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Automatically builds the dropdown menus in the Navbar[cite: 12]
   function generateAutoNav(data) {
+    // Attach dropdown menus to existing nav items based on text content
     const navItems = document.querySelectorAll('.nav-links > li');
     
     navItems.forEach(item => {
@@ -112,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const li = document.createElement('li');
           const a = document.createElement('a');
           a.href = `viewer.html?id=${entry.id}`;
+          a.target = '_blank';
           a.textContent = `> ${entry.title}`;
           li.appendChild(a);
           ul.appendChild(li);
@@ -122,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Helper to create HTML for Blog/Lab Cards[cite: 12]
   function createCardHTML(entry) {
     let imgHTML = '';
     if (entry.imageLink) {
@@ -139,13 +143,16 @@ document.addEventListener('DOMContentLoaded', () => {
         <span class="card-tag">#${entry.category}</span>
         <h4 class="card-title">${entry.title}</h4>
         <p>${entry.description}</p>
-        <a href="viewer.html?id=${entry.id}" class="btn" style="padding: 0.5rem 1rem; font-size: 0.8rem;">[ Read More ]</a>
+        <a href="viewer.html?id=${entry.id}" target="_blank" class="btn" style="padding: 0.5rem 1rem; font-size: 0.8rem;">[ Read More ]</a>
       </div>
     `;
   }
 
-  // Populates the grid sections on blog.html and lab.html[cite: 12]
   function populateGrids(data) {
+    // Use target classes or specific IDs for different categories if needed
+    // In our HTML, we'll set specific IDs like grid-blogs, grid-labs
+    
+    // Blogs
     const aiGrid = document.getElementById('grid-blogs-ai');
     const pentestGrid = document.getElementById('grid-blogs-pentesting');
     const workflowGrid = document.getElementById('grid-blogs-workflows');
@@ -156,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (workflowGrid) workflowGrid.innerHTML = data.blogs.filter(b => b.category === 'Workflows').map(createCardHTML).join('');
     }
 
+    // Labs
     const labAiGrid = document.getElementById('grid-labs-ai');
     const labPentestGrid = document.getElementById('grid-labs-pentesting');
     const labWorkflowGrid = document.getElementById('grid-labs-workflows');
@@ -166,13 +174,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (labWorkflowGrid) labWorkflowGrid.innerHTML = data.labs.filter(l => l.category === 'Workflows').map(createCardHTML).join('');
     }
 
+    // Services
     const servicesGrid = document.getElementById('grid-services');
     if (servicesGrid && data.services) {
       servicesGrid.innerHTML = data.services.map(createCardHTML).join('');
     }
   }
 
-  // Renders the full blog post in viewer.html[cite: 12]
   function populateViewer(data) {
     const viewerContainer = document.getElementById('viewer-content');
     if (!viewerContainer) return;
@@ -198,17 +206,16 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
       }
 
-      // UPDATED: Now supports HTML headings and links directly from data.json[cite: 10, 12]
       viewerContainer.innerHTML = `
         <span class="hero-subtitle fade-in-up">[ ${foundEntry.category.toUpperCase()} ]</span>
         <h1 class="fade-in-up delay-1" style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 2rem;">
           ${foundEntry.title}<span class="accent">.</span>
         </h1>
         ${imgHTML}
-        <div class="fade-in-up ${foundEntry.imageLink ? 'delay-2' : 'delay-1'} blog-body-content" style="font-size: 1.1rem; max-width: 800px; line-height: 1.8;">
+        <div class="fade-in-up ${foundEntry.imageLink ? 'delay-2' : 'delay-1'}" style="font-size: 1.1rem; max-width: 800px; line-height: 1.8;">
           <p style="color: var(--text-primary); font-weight: 600; margin-bottom: 2rem;">${foundEntry.description}</p>
-          <div class="rich-text">
-            ${foundEntry.content}
+          <div style="color: var(--text-secondary);">
+            ${foundEntry.content.replace(/\n/g, '<br><br>')}
           </div>
         </div>
       `;

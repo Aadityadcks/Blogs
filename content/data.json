@@ -18,8 +18,8 @@
     },
     {
       "id": "blog-3",
-      "title": "Exploiting Insecure Direct Object References",
-      "category": "Pentesting",
+      "title": "The NetMirror Deception",
+      "category": "Reverse-engineering",
       "imageLink": "https://images.unsplash.com/photo-1510511459019-5bea2bc88fb9?auto=format&fit=crop&q=80&w=800",
       "description": "A deep dive into finding and weaponizing IDOR vulnerabilities in enterprise APIs.",
       "content": "IDOR vulnerabilities are incredibly common. In this post, I explore how to find and exploit them in modern APIs."
